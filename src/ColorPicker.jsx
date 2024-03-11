@@ -3,7 +3,8 @@ import React, {useState} from "react";
 export default function ColorPicker() {
 
   const [backroundColor, setBackgroundColor] = useState("#ff99aa")
-  const [color, setColor] = useState("#ffff")
+  const [color, setColor] = useState("#ffffff")
+
 
 
   function handleBackgroundColorChange(event) {
@@ -12,9 +13,10 @@ export default function ColorPicker() {
   function handleColorChange(event) {
     setColor(event.target.value)
   }
+  
   return(
     <>
-      <div className="color-picker-component">
+      <div className="color-picker-component" style={{borderColor: backroundColor}}>
 
         <h1>Color Picker</h1>
 
